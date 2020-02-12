@@ -1,8 +1,7 @@
-FROM amake/x11client:latest
-MAINTAINER Aaron Madlon-Kay <aaron@madlon-kay.com>
+FROM xanter/x11client:latest
 
 # Inspired by monokrome/wine
-ENV WINE_MONO_VERSION 0.0.8
+ENV WINE_MONO_VERSION 4.9.4
 USER root
 
 # Install some tools required for creating the image
