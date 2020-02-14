@@ -16,7 +16,7 @@ RUN dpkg --add-architecture i386 \
         && apt-get update \
         && apt-get install -y --no-install-recommends \
                 wine \
-                wine64 \
+                wine32 \
         && rm -rf /var/lib/apt/lists/*
 
 # Use the latest version of winetricks
@@ -32,7 +32,7 @@ RUN mkdir -p /usr/share/wine/mono \
 USER xclient
 ENV HOME /home/xclient
 ENV WINEPREFIX /home/xclient/.wine
-ENV WINEARCH win64
+ENV WINEARCH win32
 
 # Use xclient's home dir as working dir
 WORKDIR /home/xclient
